@@ -37,7 +37,8 @@ export const AGENT_UI_COMMAND_TYPES = [
   'focus-document-section',
   'prompt-user-choice',
   'show-diff',
-  'agent-status'
+  'agent-status',
+  'agent-plan'
 ] as const;
 
 export type AgentUiCommandType = typeof AGENT_UI_COMMAND_TYPES[number];
