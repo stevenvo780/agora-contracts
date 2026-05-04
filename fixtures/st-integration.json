@@ -1,0 +1,13 @@
+[
+  {
+    "id": "front-derivation-disjunctive-syllogism",
+    "description": "!(!P | !Q), R -> !S, R | !Q |- !S",
+    "source": "logic classical.propositional\nlet p1 = !(!P | !Q)\nlet p2 = R -> !S\nlet p3 = R | !Q\nlet c = !S\nlet d = derive c from {p1,p2,p3}",
+    "expectedStatus": "provable",
+    "expectedProofMethod": "natural_deduction",
+    "expectedJustifications": [
+      "Silogismo disyuntivo",
+      "Modus Ponens"
+    ]
+  }
+]

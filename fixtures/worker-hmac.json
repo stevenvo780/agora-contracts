@@ -1,0 +1,22 @@
+{
+  "syncHttp": {
+    "secret": "secret-1",
+    "workspaceId": "workspace-1",
+    "personalWorkspaceId": "personal:user-1",
+    "userId": "user-1",
+    "timestamp": 1700000000000,
+    "sharedSignature": "6799831f6f8650d4cebcd470f4f09299acf9e053d4168e102f4822c5af1cd3ab",
+    "personalSignature": "2b0a722f07b6070a36202100eb61f4416a0d9b2246119ebc2d46cc7b49da5c3e",
+    "headers": {
+      "X-Worker-Token": "workspace-1",
+      "X-Worker-Ts": "1700000000000",
+      "X-Worker-Sig": "6799831f6f8650d4cebcd470f4f09299acf9e053d4168e102f4822c5af1cd3ab"
+    }
+  },
+  "socket": {
+    "secret": "worker-secret",
+    "workspaceId": "workspace-1",
+    "workspaceType": "shared",
+    "timestamp": 1700000000000
+  }
+}

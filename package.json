@@ -1,0 +1,22 @@
+{
+  "name": "@agora/contracts",
+  "version": "1.0.0",
+  "description": "Shared contracts for Agora services",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "fixtures"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "zod": "^4.4.2"
+  }
+}
