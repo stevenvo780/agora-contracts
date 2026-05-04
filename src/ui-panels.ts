@@ -33,7 +33,11 @@ export const AGENT_UI_COMMAND_TYPES = [
   'open_terminal',
   'open_problems',
   'open_ai_config',
-  'open_linter_config'
+  'open_linter_config',
+  'focus-document-section',
+  'prompt-user-choice',
+  'show-diff',
+  'agent-status'
 ] as const;
 
 export type AgentUiCommandType = typeof AGENT_UI_COMMAND_TYPES[number];

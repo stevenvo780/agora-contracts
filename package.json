@@ -1,6 +1,6 @@
 {
   "name": "@stevenvo780/agora-contracts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared contracts for Agora services (zod schemas + TS types)",
   "license": "MIT",
   "author": "stevenvo780",

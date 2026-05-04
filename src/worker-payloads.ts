@@ -37,7 +37,7 @@ export const splitRepoPath = (repoPath: string): { folder: string; name: string 
 };
 
 export const parseWorkerCommitPayload = (input: unknown): ParseResult<WorkerCommitPayload> => {
-  const result = parseZod(workerCommitSchema, input);
+  const result = parseZod<WorkerCommitPayload>(workerCommitSchema, input);
   if (!result.ok) return result;
   const sanitized = sanitizeRepoPath(result.value.repoPath);
   if (!sanitized) return err('field "repoPath" contains traversal or empty segments');
@@ -51,7 +51,7 @@ export const workerDeleteSchema = z.object({
 export type WorkerDeletePayload = z.infer<typeof workerDeleteSchema>;
 
 export const parseWorkerDeletePayload = (input: unknown): ParseResult<WorkerDeletePayload> => {
-  const result = parseZod(workerDeleteSchema, input);
+  const result = parseZod<WorkerDeletePayload>(workerDeleteSchema, input);
   if (!result.ok) return result;
   const sanitized = sanitizeRepoPath(result.value.repoPath);
   if (!sanitized) return err('field "repoPath" contains traversal or empty segments');
@@ -67,7 +67,7 @@ export const workerUploadUrlSchema = z.object({
 export type WorkerUploadUrlPayload = z.infer<typeof workerUploadUrlSchema>;
 
 export const parseWorkerUploadUrlPayload = (input: unknown): ParseResult<WorkerUploadUrlPayload> => {
-  const result = parseZod(workerUploadUrlSchema, input);
+  const result = parseZod<WorkerUploadUrlPayload>(workerUploadUrlSchema, input);
   if (!result.ok) return result;
   const sanitized = sanitizeRepoPath(result.value.repoPath);
   if (!sanitized) return err('field "repoPath" contains traversal or empty segments');
