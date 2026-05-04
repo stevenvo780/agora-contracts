@@ -43,7 +43,7 @@ export const parseSyncEventPayload = (input: unknown): ParseResult<SyncEventPayl
   return ok({
     type: input.type as SyncEventPayload['type'],
     path: isString(input.path) ? input.path : '',
-    folder: isString(input.folder) ? input.folder : 'No estructurado',
+    folder: isString(input.folder) ? input.folder : '',
     docId: isString(input.docId) ? input.docId : null,
     timestamp: input.timestamp,
     schemaVersion: isNumber(input.schemaVersion) ? input.schemaVersion : 1,

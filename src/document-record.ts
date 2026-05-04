@@ -85,7 +85,7 @@ export const parseDocumentRecord = (id: string, raw: unknown): ParseResult<Docum
   if (!isObject(raw)) return err('document data is not an object');
   const name = isString(raw.name) ? raw.name : '';
   if (!name) return err('document missing field "name"');
-  const folder = isString(raw.folder) ? raw.folder : 'No estructurado';
+  const folder = isString(raw.folder) ? raw.folder : '';
   return ok({
     id,
     name,

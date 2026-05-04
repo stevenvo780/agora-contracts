@@ -29,10 +29,10 @@ export const sanitizeRepoPath = (input: unknown): string | null => {
   return cleaned;
 };
 
-/** Divide repoPath en (folder, name). Folder vacío → "No estructurado". */
+/** Divide repoPath en (folder, name). Sin slash = doc en raíz (folder=""). */
 export const splitRepoPath = (repoPath: string): { folder: string; name: string } => {
   const idx = repoPath.lastIndexOf('/');
-  if (idx === -1) return { folder: 'No estructurado', name: repoPath };
+  if (idx === -1) return { folder: '', name: repoPath };
   return { folder: repoPath.slice(0, idx), name: repoPath.slice(idx + 1) };
 };
 
