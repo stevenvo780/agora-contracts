@@ -1,7 +1,16 @@
 {
-  "name": "@agora/contracts",
+  "name": "@stevenvo780/agora-contracts",
   "version": "1.0.0",
-  "description": "Shared contracts for Agora services",
+  "description": "Shared contracts for Agora services (zod schemas + TS types)",
+  "license": "MIT",
+  "author": "stevenvo780",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevenvo780/agora-contracts.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -11,7 +20,8 @@
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "typescript": "^5.0.0"
